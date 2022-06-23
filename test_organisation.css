@@ -1,0 +1,35 @@
+/* Feuille de style */
+body
+{background-color: rgb(171, 180, 222);}
+ul {
+  list-style-type: none;
+}
+
+#topsection
+{
+  widh: 80%;
+  display: flex;
+  justify-content: flex-between;
+  
+}
+header
+{order:2;margin: auto;}
+
+nav{order 1;}
+
+p{ 
+  background-color: rgb(189, 197, 240);
+  width :70% ;
+  /*height: 55px;*/
+  overflow:auto;
+  padding: 20px;
+  margin: auto;
+  margin-bottom:30px;
+  border: 2px black outset;
+  border-radius: 10px;
+}
+
+a{
+  
+  color: rgb(0, 0, 100);
+}

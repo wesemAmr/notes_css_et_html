@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> formatez du texte</title>
+		<link rel="stylesheet" href="notes_html_et_css.css" />
+	</head>
+	<body>
+		<h1>formatez du texte</h1>
+	<h2>La taille : font-size</h2>
+		<h3>taille absolue </h3>
+			<div class="code">px</div>
+		<h3>taille relative </h3>
+			<p><div class="code">xx-small</div>  : minuscule ;
+			<div class="code">x-small</div>  : très petit ;
+			<div class="code">small</div>  : petit ;
+			<div class="code">medium</div>  : moyen ;
+			<div class="code">large</div>  : grand ;
+			<div class="code">x-large</div>  : très grand ;
+			<div class="code">xx-large</div>  : euh… gigantesque.</p>
+
+			<p><div class="code">em</div></p>
+
+	<h2>La police</h2>
+		<h3>Modifier la police utilisée</h3>
+			<p>font-family</p>
+			<div class="code">balise {font-family: police1, police2, police3, police4;}</div>
+
+			<p>fonctionnent sur la pluspart des navigateurs :</p>
+				<ul>
+					<li>Arial ;</li>
+					<li>Arial Black ;</li>
+					<li>Comic Sans MS ;</li>
+					<li>Courier New ;</li>
+					<li>Georgia ;</li>
+					<li>Impact ;</li>
+					<li>Times New Roman ;</li>				
+					<li>Trebuchet MS ;</li>
+					<li>Verdana.</li>
+				</ul>
+			
+
+			<p>Si le nom de la police comporte des espaces ,l'entourer de guillemets</p>
+		<h3>Utiliser une police personnalisée avec @font-face</h3>
+			<p>utiliser n'importe quelle police sur son site
+			il faudra que le navigateur de vos visiteurs télécharge automatiquement le fichier
+			la plupart des polices sont soumises au droit d'auteur
+				<a href="https://www.fontsquirrel.com">fontsquirrel.com </a> ou
+				<a href="https://www.dafont.com/fr/">dafont.com</a>
+				</p>
+
+			<p>il existe plusieurs formats de fichiers de polices, et ceux-ci ne fonctionnent pas sur tous les navigateurs</p>
+
+			<p>les différents formats de fichiers de polices</p>
+			<ul>
+				<li>
+					.ttf  : TrueType Font. Fonctionne sur IE9 et tous les autres navigateurs ;
+				</li>
+				<li>
+					.eot  : Embedded OpenType. Fonctionne sur Internet Explorer uniquement, toutes versions. Ce format est propriétaire, produit par Microsoft ;
+				</li>
+				<li>
+					.otf  : OpenType Font. Ne fonctionne pas sur Internet Explorer ;
+				</li>
+				<li>
+					.svg  : SVG Font. Le seul format reconnu sur les iPhone et iPad pour le moment ;
+				</li>
+				<li>
+					.woff  : Web Open Font Format. Nouveau format conçu pour le Web, qui fonctionne sur IE9 et tous les autres navigateurs.
+				</li>
+			</ul>
+				
+				
+
+			<h3>définir une nouvelle police</h3>
+			<div class="code">@font-face {font-family: 'MaSuperPolice'; src: url('MaSuperPolice.eot');}</div>
+
+			<p><h3>proposer plusieurs formats pour la police</h3><div class="code">@font-face {font-family: 'MaSuperPolice';src: url('MaSuperPolice.eot') format('eot'),url('MaSuperPolice.woff') format('woff'),url('MaSuperPolice.ttf') format('truetype'),url('MaSuperPolice.svg') format('svg');}</div></p>
+				
+
+			<h3>resultat final: </h3>	
+			 <p><div class="code">@font-face { /* Définition d'une nouvelle police nommée CAC Champagne */ font-family: 'cac_champagneregular'; src: url('cac_champagne-webfont.eot'); src: url('cac_champagne-webfont.eot?#iefix') format('embedded-opentype'), url('cac_champagne-webfont.woff') format('woff'), url('cac_champagne-webfont.ttf') format('truetype'), url('cac_champagne-webfont.svg#cac_champagneregular') format('svg');} <br><br>
+
+			h1 /* Utilisation de la police qu'on vient de définir sur les titres */{font-family: 'cac_champagneregular', Arial, serif;}    </div></p>                                                                  
+
+
+
+	<h2>Italique, gras, souligné…</h2>
+		<h3>Mettre en italique</h3>
+			<p>on utilise<div class="code">font-style</div> 
+
+			<div class="code">italic</div>  : le texte sera mis en italique ;
+			<div class="code">oblique </div> : le texte sera passé en oblique (les lettres sont penchées, le résultat est légèrement différent de l'italique proprement dit) ;
+			<div class="code">normal</div>  : le texte sera normal (par défaut). Cela vous permet d'annuler une mise en italique. Par exemple, si vous voulez que les textes entre <div class="code">< em></div>  ne soient plus en italique Soulignement et autres décorations</p>
+
+		<h3>Mettre en gras</h3>
+			<p>on utilise <div class="code">font-weight</div>
+
+			<div class="code">bold</div>  : le texte sera en gras ;
+			<div class="code">normal</div>  : le texte sera écrit normalement (par défaut).</p>
+
+		<h3>Soulignement et autres décorations</h3>
+			<p>on utilise <div class="code">text-decoration</div>
+
+			<div class="code">underline</div>  : souligné ;
+			<div class="code">line-through</div>  : barré ;
+			<div class="code">overline</div>  : ligne au-dessus ;
+			<div class="code">none</div>  : normal (par défaut).</p>
+
+	<h2>L'alignement</h2>
+		<p>propriété <div class="code">text-align</div>
+		<div class="code">left</div>  : le texte sera aligné à gauche (c'est le réglage par défaut) ;
+		<div class="code">center</div>  : le texte sera centré ;
+		<div class="code">right</div>  : le texte sera aligné à droite ;
+		<div class="code">justify</div>  : le texte sera « justifié ». Justifier le texte permet de faire en sorte qu'il prenne toute la largeur possible
+		Vous ne pouvez pas modifier l'alignement du texte d'une balise inline (comme <div class="code">< span>  , < a>  , < em>  , < strong></div>  …). L'alignement ne fonctionne que sur des balises de type block (<div class="code">< p>  , < div>  , < h1>  , < h2></div>   …)</p>
+
+	<h2>Les flottants</h2>
+		<div class="code">float</div>
+		<div class="code">left</div>  : l'élément flottera à gauche ;
+		<div class="code">right</div>  : l'élément flottera… à droite 
+
+		<h3>Faire flotter une image</h3>
+			<p><div class="code">< p>< img src="flash.gif" class="imageflottante" alt="Image flottante" /> Ceci est un texte normal de paragraphe, écrit à la suite de l'image et qui l'habillera car l'image est flottante.< /p></div>
+			<div class="code">.imageflottante{float: left;}</div></p>
+
+
+		<h3>Stopper un flottant</h3>
+			<p>Stop, ce texte doit être en-dessous du flottant et non plus à côté ». C'est la propriété clear
+			<div class="code">left</div>  : le texte se poursuit en dessous après un float: <div class="code">left</div>;
+			<div class="code">right</div>  : le texte se poursuit en dessous après un float: <div class="code">right</div>;
+
+			<div class="code">both</div>  : le texte se poursuit en dessous, que ce soit après un float: <div class="code">left</div>;  ou après un float:<div class="code">right</div> 
+
+			<div class="code">< p>< img src="flash.gif" class="imageflottante" alt="Image flottante" />< /p>
+			< p>Ce texte est écrit à côté de l'image flottante.< /p>
+			< p class="dessous">Ce texte est écrit sous l'image flottante.< /p></div>
+
+			<div class="code">.imageflottante{float: left;}</div>
+			<div class="code">.dessous{clear: both;}</div></p>
+	</body>
+</html>

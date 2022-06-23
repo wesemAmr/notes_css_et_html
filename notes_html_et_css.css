@@ -1,0 +1,182 @@
+body
+{
+    background-color:rgba(47,49,54, 1); /* Le fond de la page  */
+    color: rgb(255, 255, 255); /* Le texte de la page  */
+   /*background: url("fond_endrois.jpg") fixed repeat*/ ;
+ 	width: 50%;
+ 	min-width: 700px;
+ }/* On travaille sur la balise body, donc sur TOUTE la page */
+
+
+.sommaire
+{
+	font-size: 1.6em;
+}
+
+.code
+{
+	color: rgb(255, 255, 255) ;
+	background-color: rgba(63, 187, 144, 0.1);
+	box-shadow: 3px 3px 20px rgba(63, 187, 144, 0.1);
+	border-radius: 3px;
+}
+
+a
+{
+	color: rgb(201, 135, 222) ;
+	text-decoration: none;
+}
+a:hover /*quand le visiteur survole le lien */
+{
+	color: #3A8625 ;
+	border-left: solid;
+	padding-left: 10px;
+}
+
+a:active /* Quand le visiteur clique sur le lien */
+{
+    background-color: rgb(201, 135, 222);
+}
+
+
+a:focus /* Quand le visiteur sélectionne le lien */
+{
+    background-color: #ffffff;
+}
+
+a:visited /* Quand le visiteur a déjà vu la page concernée */
+{
+    color: #AAA; /* Appliquer une couleur grise */
+}
+
+
+
+h1
+{
+	color: #ffffff;
+	background-color:rgb(59, 62, 69);
+	border-radius: 7px;
+	/*box-shadow: 8px 8px 10px rgba(243, 225, 196, 0.5);*/
+	box-shadow: 26px 16px 10px black;
+	/*margin: 26px;*/
+	padding:26px ;
+	margin: auto;
+	width: 700px;
+	border: 1px rgba(255, 255, 255, 0.2) outset;
+	
+}
+
+h2
+{
+	color: #ffffff;
+	background-color:rgb(59, 62, 69);
+	border-radius: 7px;
+	box-shadow: 16px 8px 8px black;
+	/*margin: 18px;*/
+	padding: 18px ;
+	border: 1px rgba(255, 255, 255, 0.2) outset;
+	
+}
+h3
+{
+	color: #ffffff;
+	background-color:rgb(59, 62, 69);
+	border-radius: 7px;
+	box-shadow: 8px 4px 6px black;
+	/*margin: 14px;*/
+	padding: 14px;
+	border: 1px rgba(255, 255, 255, 0.2) outset;
+	
+}
+
+h4
+{
+	color: #ffffff;
+	background-color:rgb(59, 62, 69);
+	border: 2px #9703BC double
+	border-radius: 7px;
+	box-shadow: 4px 2px 4px black;
+	/*margin: 12px;*/
+	padding: 12px;
+	border: 1px rgba(255, 255, 255, 0.2) outset;
+}
+
+
+
+em
+{
+	font-weight: bold;
+	text-shadow: 2px 2px 4px black;
+	
+}
+
+
+
+#imgbordures
+{
+	border: 5px rgb(0, 255, 255) ridge  ;
+	border-radius: 7px;
+	box-shadow: 8px 8px 1px rgba(0, 0, 0, 1);
+
+}
+
+
+
+#test_bordures_affine
+{
+	border: 1px rgb( 27, 19,130) inset ;
+	border-radius: 10px/20px;
+	box-shadow: 0px -8px 20px rgba(27, 19,130, 0.5) inset;
+}
+
+#test_dynam
+{
+	border: 1px rgb( 27, 19,130) outset  ;
+	border-radius: 10px/20px;
+	box-shadow: 0px -8px 20px rgba(27, 19,130, 0.5) inset;
+}
+
+#test_dynam:hover
+{
+	border: 1px rgb( 27, 19,130)   ;
+	border-radius: 10px/20px;
+	box-shadow: 0px -8px 20px rgba(27, 19,130, 0.5) inset;
+}
+
+#test_dynam:active
+{
+	border: 1px rgb( 27, 19,130) inset ;
+	border-radius: 10px/20px;
+	box-shadow: 0px -8px 20px rgba(27, 19,130, 0.5) inset;
+}
+
+#test_dynam:focus
+{
+	border: 1px #ffffff  ;
+	border-radius: 10px/20px;
+	box-shadow: 0px -8px 20px rgba(27, 19,130, 0.5) inset;
+}
+
+figure img
+{
+	border-radius: 5px;
+
+}
+
+td ,th
+{
+	border: 1px solid white;
+	padding: 10px;
+}
+
+table
+{border-collapse: collapse;
+margin: 20px;}
+
+caption
+{
+	padding: 10px;
+
+	border: 2px solid white;
+	border-collapse: collapse;
+}

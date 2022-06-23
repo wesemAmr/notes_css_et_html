@@ -1,0 +1,24 @@
+#conteneur 
+{
+	display: flex;
+	border: 2px solid #444;
+}
+
+.element 
+{
+	widh:  150 px;
+	height:  100 px;
+}
+
+.element :nth-child(1)
+{
+	background-color: red;
+}
+.element :nth-child(2)
+{
+	background-color: blue;
+}
+.element :nth-child(3)
+{
+	background-color: green;
+}

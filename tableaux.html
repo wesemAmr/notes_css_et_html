@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Ajoutez des tableaux</title>
+		<link rel="stylesheet" href="notes_html_et_css.css" />
+	</head>
+	<body>
+		<h1>Ajoutez des tableaux</h1>
+			<h2>Un tableau simple</h2>
+				<p><span class="code">< table> </ table></span> indique le début et la fin du tableau </p>
+				<p><span class="code">< tr> </ tr></span>  : indique le début et la fin d'une ligne du tableau ;<br>
+				<span class="code">< td> < /td></span>  : indique le début et la fin du contenu d'une cellule.</p>
+				<p>on ajoutes des bordures afin qu'elles soient visibles </p>
+				<p class="code">td {border: 1px solid black; }</p>
+				<p>coller les bordures </p>
+				<p class="code">border-collapse:</p>
+				<blockquote>
+					<span class="code">collapse</span>  : bordures collées<br>
+					<span class="code">separate</span>  : bordures dissociées
+				</blockquote>
+				<p class="code">
+					table {border-collapse: collapse;}<br>
+					td{border: 1px solid black;}
+				</p>
+
+				<h3>La ligne d'en-tête</h3>
+					<p> 
+						<span class="code">< th></span>au lieu <span class="code"> < td></span> la ligne d'en-tête du tableau
+					</p>
+
+					<div class="code">
+						< tr>
+						    <blockquote>< th>Nom< /th><br>
+						    < th>Âge< /th><br>
+						    < th>Pays< /th></blockquote>
+						< /tr>
+					</div>
+
+					<p>pour encadrer l'entète il faut ajouter a th séparément</p>
+					<p class="code"> 
+						td, th<br>
+						{border: 1px solid black;}
+					</p>
+
+				<h3>Titre du tableau</h3>
+					<p class="code">caption</p>
+					<p class="code">	
+						< table><br>
+  						< caption> titre< /caption><br>
+   						< tr>...< /tr> ... <br>
+   						< /table>
+       				</p>
+
+       				<p>changer la position du titre <div class="code">caption-side: top ou bottom</div> </p>
+
+			<table>
+				<caption>tableau pour tester</caption>
+				<tr>
+					<th>colonne 1</th>
+					<th>colonne 2</th>
+					<th>colonne 3</th>
+					<th>colonne 4</th>
+				</tr>
+				<tr>
+					<td>aaa</td>
+					<td>bbb</td>
+					<td>ccc</td>
+					<td>ddd</td>
+				</tr>
+
+				<tr>
+					<td>eee</td>
+					<td>fff</td>
+					<td>ggg</td>
+					<td>hhh</td>
+				</tr>
+
+				<tr>
+					<td>iii</td>
+					<td>jjj</td>
+					<td>kkk</td>
+					<td>lll</td>
+					<td>mmm</td>
+					<td>nnn</td>
+				</tr>		
+			</table>
+
+			<h2>Un tableau structuré</h2>
+				<h3>Diviser un gros tableau</h3>
+					<p>
+						<span class="code">< thead>< /thead></span>la fusion de colonnes<br>
+						<span class="code">< tbody>< /tbody></span>le corps (au centre)<br>
+						<span class="code">< tfoot>< / tfoot></span>le pied du tableau (en bas)<br> 
+						il est conseillé d'écrire les balises dans l'ordre suivant : < thead> < tfoot> < tbody></p>
+
+				<h3>fusion </h3>
+
+					<p>
+						<span class="code">colspan </span>la fusion de colonnes<br>
+						<span class="code">rowspan </span>la fusion de lignes<br>
+					</p>
+					<p class="code">< td colspan="2"></p>
+
+				
+
+
+			<table>
+				<caption>tableau pour tester</caption>
+				<tr>
+					<th colspan="2">colonne 1</th>
+					<th>colonne 2</th>
+					<th>colonne 3</th>
+					<th>colonne 4</th>
+				</tr>
+				<tr >
+					<td rowspan="2">aaa</td>
+					<td>bbb</td>
+					<td>ccc</td>
+					<td>ddd</td>
+				</tr>
+
+				<tr>
+					<td >eee</td>
+					<td>fff</td>
+					<td >ggg</td>
+					<td>hhh</td>
+				</tr>
+
+				<tr>
+					<td colspan="2">iii</td>
+					<td >jjj</td>
+					<td>kkk</td>
+					
+				</tr>		
+			</table>
+
+
+			<table>
+				<caption>tableau dans l'autre sens (fusion en rowspan )</caption>
+			   <tr>
+			       <th>Titre du film</th>
+			       <td>Massacre à la tronçonneuse</td>
+			       <td>Les bisounours font du ski</td>
+			       <td>Lucky Luke, seul contre tous</td>
+			   </tr>
+			   <tr>
+			       <th>Pour enfants ?</th>
+			       <td>Non, trop violent</td>
+			       <td>Oui, adapté</td>
+			       <td rowspan="2">Pour toute la famille !</td>
+			   </tr>
+			   <tr>
+			       <th>Pour adolescents ?</th>
+			       <td>Oui</td>
+			       <td>Pas assez violent...</td>
+			   </tr>
+			</table>
+		
+	</body>
+</html>

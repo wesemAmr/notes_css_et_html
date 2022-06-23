@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>de la couleur et un fond</title>
+		<link rel="stylesheet" href="notes_html_et_css.css" />
+	</head>
+	<body>
+		<h1>Ajoutez de la couleur et un fond</h1>
+		<h2>Couleur du texte</h2>
+		<h3>Indiquer le nom de la couleur</h3>
+		<figure><img src="couleurs.png"></figure>
+		<h3>La notation hexadécimale</h3>
+		<p> exemple de couleur en exa :  #FF5A28</p>
+		<h3>La méthode RGB</h3>
+		<p>on peut trv les couleurs avec paint</p>
+		<figure><img src="couleur_paint.jpg"></figure>
+
+		<h3>utiliser Color picker pr trv l'exa '</h3>
+		<a href="https://www.webfx.com/web-design/color-picker/">http://www.colorpicker.com</a>
+
+		<h2>Couleur de fond</h2> 
+		<p> il faut travailler sur la balise < body></p>
+		<p class="code">body <blockquote class="code">{background-color:#66dbc2; /* Le fond de la page  */<br>
+            color: #171180; /* Le texte de la page  */}#171180</blockquote>
+			</p>
+		<h3>Le CSS et l'héritage</h3>
+		<p>exeple , p se trouves dans body , donc ce qu'on applique a body s'applique a p tant qu'on indique riend e particulier </p>
+
+		<h2>Images de fond</h2>
+			<h3>Appliquer une image de fond</h3>
+				<p class="code">background-image : url("nom_de_l_image.png")</p>
+
+			<h3>Options disponibles pour l'image de fond </h3>
+				<h4>background-attachment  : fixer le fond</h4>
+					<ul>
+						<li>fixed  : l'image de fond reste fixe ;</li>
+						<li>scroll  : l'image de fond défile avec le texte (par défaut).</li>
+					</ul>
+
+				<h4>background-repeat  : répétition du fond</h4>
+					<ul>
+						<li>no-repeat  : le fond ne sera pas répété. L'image sera donc unique sur la page ;</li>
+						<li>repeat-x  : le fond sera répété uniquement sur la première ligne, horizontalement ;</li>
+						<li>repeat-y  : le fond sera répété uniquement sur la première colonne, verticalement ;</li>
+						<li>repeat  : le fond sera répété en mosaïque (par défaut).</li>
+					</ul>
+
+				<h4>background-position  : position du fond</h4>
+					<p>deux valeurs en pixels pour indiquer la position du fond par rapport au coin supérieur gauche de la page : <div class="code">background-position: 30px 50px;</div></p>
+					<p>utiliser ces valeurs en anglais :</p>
+					<ul>
+						<li>top  : en haut </li>
+						<li>bottom  : en bas </li>
+						<li>left  : à gauche </li>
+						<li>center  : centré</li>
+						<li>right  : à droite</li>
+					</ul> <p>Il est possible de combiner ces mots</p>
+
+			<h3>Combiner les propriétés</h3>
+				<p>utiliser une sorte de « super-propriété » appelée background, la valeur peut combiner plusieurs des propriétés :background-image  , background-repeat, sbackground-attachment  et background-position</p>
+				<p class="code">body {background: url("soleil.png") fixed no-repeat top right;}</p>
+
+			<h3>Plusieurs images de fond</h3>
+				<p>séparer les déclarations par une virgule, comme ceci :
+					<div class="code">body {background: url("soleil.png") fixed no-repeat top right, url("neige.png") fixed;}</div>
+				La première image de cette liste sera placée par-dessus les autres </p>
+
+		<h2>La transparence</h2>
+			<p>la propriété opacity  et la notation RGBa</p>
+			<h3>La propriété opacity</h3>
+				<p>'indiquer le niveau d'opacité entre 0 et 1</p>
+				<p class="code">p{opacity: 0.6;}</p>
+
+			<h3>La notation RGBa</h3>
+				<p class="code">p{background-color: rgba(255, 0, 0, 0.5); /* Fond rouge à moitié transparent */}</p>
+				<p>(rgbe pr les plus récents et rgb pr les enciens)</p>
+
+
+	</body>
+</html>

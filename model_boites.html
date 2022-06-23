@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Découvrez le modèle des boîtes</title>
+		<link rel="stylesheet" href="notes_html_et_css.css" />
+	</head>
+	<body>
+		<h1>Découvrez le modèle des boîtes</h1>
+			<h2>Les balises de type block et inline</h2>
+				<p>block :</p> 
+					<blockquote>
+						exemple des paragraphes<br>
+						crée automatiquement un retour à la ligne avant et après<br>
+						un site est constituée d'une série de blocs<br>
+						il est possible de mettre un bloc à l'intérieur d'un autre<br>
+					</blockquote>
+
+				<p>inline :</p>					
+					<blockquote>
+						exemple des liens<br>
+						à l'intérieur d'une balise block<br>
+						pas de retour à la ligne<br>
+					</blockquote>
+				<figure><img src="block_inline3302.jpg"></figure>
+				<h3>Les balises universelles</h3>
+					<blockquote><span class="code">< span>< /span> </span> (inline) ;<br>
+					<span class="code">< div>< /div> </span>  (block).</blockquote>	
+					
+			<h2>Les dimensions</h2>
+				<blockquote>
+					<span class="code">width  :</span>la largeur du bloc.<br>en (px), ou (%).<br>
+					<span class="code">height  :</span>la hauteur du bloc.<br> en (px), ou (%).
+				</blockquote>
+				<h3>Minimum et maximum</h3>
+					<p><span class="code">min-width  :</span> largeur minimale ;<br>
+					<span class="code">min-height  :</span> hauteur minimale ;<br>
+					<span class="code">max-width  :</span> largeur maximale ;<br>
+					<span class="code">max-height  :</span> hauteur maximale.</p>
+					<p class="code">p<br>
+						{width: 50%;<br>
+					    min-width: 400px;}</p>
+								
+			<h2>Les marges</h2>
+				<p><span class="code">padding  :</span>marge intérieure. en (px) ;<br>
+				<span class="code">margin  :</span> marge extérieure. Là encore, (px)</p> 
+				<figure><img src="marge5633.jpg"></figure>
+
+				<h3>Centrer des blocs</h3>
+					<p>marges extérieures automatiques : <span class="code">margin: auto;</span></p>
+
+			<h2>Quand ça dépasse…</h2>
+				<h3><span class="code">overflow  :</span>  couper un bloc</h3>
+				
+					<p><span class="code">visible  :</span> (par défaut) le texte reste visible ;<br>
+					
+					<span class="code">hidden  :</span> le texte sera coupé.<br>
+					
+
+					<span class="code">scroll  :</span> là encore, le texte sera coupé . Sauf que cette fois, barres de défilement <br>
+					
+
+					<span class="code">auto  :</span> le navigateur qui décide </p>
+
+				<h3><span class="code">word-wrap  :</span> couper les textes trop larges</h3>
+					<p class="code"> p{word-wrap: break-word;}</p>
+
+
+
+
+
+
+	</body>
+</html>

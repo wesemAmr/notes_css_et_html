@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> mise en place</title>
+		<link rel="stylesheet" href="notes_html_et_css.css" />
+	</head>
+	<body>
+		<h1> mise en place du css </h1>
+			<p>le css :, choisir la police , la taille la couleur des textes, choisir aussi la mise en page et tout <figure><img src="html_vs_css.png"></figure> </p>
+
+			<h2>Où écrit-on le CSS ?</h2>
+			
+				<h3>Dans un fichier .css  (recommandé) </h3>
+					<p> on ajoutes dans l'entête : <div class="code">< link rel="stylesheet" href="nomDuFichier.css" /></div></p>
+
+				<h3>Dans l'en-tête < head>  du fichier HTML</h3>
+					<p>insérer le code CSS directement dans une balise < style>  à l'intérieur de l'en-tête < head></p>
+
+				<h3>Directement dans les balises (non recommandé)</h3>
+					<p>vous pouvez ajouter un attribut style  à n'importe quelle balise. Vous insérerez votre code CSS directement dans cet attribut <div class="code"> < p style="color: green;">Bonjour et bienvenue sur mon site !< /p></div></p>
+
+
+			<h2>Appliquer un style : sélectionner une balise</h2>
+					<p class="code">p{color: blue;}</p>
+					<p class="code">balise{propriété: valeur;}</p>
+				
+				<p>3 éléments : </p>
+				<ul>
+					<li>
+						<em>des noms de balises : </em>on écrit les noms des balises dont on veut modifier l'apparence. Par exemple, si je veux modifier l'apparence de tous les paragraphes < p>  , je dois écrire p  ;
+					</li>
+
+					<li>
+						<em>des propriétés CSS :</em> Il y a par exemple la propriété color  qui permet d'indiquer la couleur du texte, font-size  qui permet d'indiquer la taille du texte, etc.
+					</li>
+
+					<li>
+						<em>les valeurs : </em>pour chaque propriété CSS, on doit indiquer une valeur. Par exemple, pour la propriété color  , il faut indiquer le nom de la couleur. Pour font-size  , il faut indiquer quelle taille on veut, etc.
+					</li>
+				</ul>
+
+
+				<p>on peut appliquer un style à plusieurs balises </br>
+					<div class="code">p,h1{color: blue;}</div></p>
+
+			<h2>Appliquer un style : class et id</h2>
+				<ul><li>l'attribut class</li><li>l'attribut id</li> </ul> 
+
+		 		<strong>dans l'html</strong>
+		 		<p>
+		 			attribut que l'on peut mettre sur n'importe quelle balise, aussi bien titre que paragraphe, image, etc.
+		 		<div class="code">< h1 class="nomQonVeu1"> < /h1> < p class="nomQonVeu2"> < /p> < img class="nomQonVeu3" /></div>
+		 		</p> 
+		 		
+		 		<strong>dans le css</strong>
+		 		<p><div class="code">.nomQonVeut1/2/3{color: blue;}</div></p>
+		 		
+		 			<li>class : precède d'un . </li>
+		 			<li>id : precède d'un #</li>
+		 		</ul>
+		 		
+
+		 		<h3>Les balises universelles</h3> 
+			 		<p>la balise-qui-ne-sert-à-rien pour selectionner un mot:<div class="code"> < span> < /span> </div></br>
+			 		Les balises < strong>  et < em>  sont de la même famille.  
+			 		<div class="code">< div> < /div>  : </div>c'est une balise de type block, qui entoure un bloc de texte. </br>
+			 		balises < p>  ,  < h1>  , etc., sont de la même famille</p>
+
+			 <h2>appliquer un style : les sélecteurs avancés</h2>
+				<h3>Les sélecteurs que vous connaissez déjà</h3>
+
+					<h4>Je veux toucher tous les paragraphes </h4>
+					<div class="code">p{}</div>
+
+					<h4>Tous les titres et tous les textes importants</h4>
+					<div class="code">h1, em{}</div>
+
+					<h4>sélectionner des balises précises</h4>
+					 <div class="code">.class{}</div>
+					 <div class="code">#id{}</div>
+
+
+				<h3>Les sélecteurs avancés</h3>
+					<h4>* : sélecteur universel</h4>
+						<p>Sélectionne toutes les balises sans exception.</p>
+						<div class="code">*{}</div>
+					
+					<h4>a b: une balise contenue dans une autre</h4>
+						<p>< em>  situées à l'intérieur d'une balise < h3></p>
+						<div class="code">h3 em{}</div>
+
+					<h4>a + b : une balise qui en suit une autre</h4>
+						<p>Sélectionne la première balise < p>  située après un titre < h3></p>
+						<div class="code">h3 + p{}</div>
+
+					<h4>a[attribut] : une balise qui possède un attribut</h4>
+						<p>Sélectionne tous les liens < a>  qui possèdent un attribut title</p>
+						<div class="code">a[title]{}</div>
+
+					<h4>a[attribut="Valeur"] : une balise, un attribut et une valeur exacte</h4>
+						<p>idem, mais l'attribut doit en plus avoir exactement pour valeur « Cliquez ici »</p> 
+						<div class="code">a[title="Cliquez ici"]{}</div>
+
+					<h4>a[attribut*="Valeur"] : une balise, un attribut et une valeur</h4>
+						<p>Idem, l'attribut doit cette fois contenir dans sa valeur le mot « ici » (peu importe sa position).</p> 
+						<div class="code">a[title*="ici"]{}</div>
+
+					<h4>D'autres sélecteurs existent !</h4>
+						<a href="https://www.w3.org/Style/css3-selectors-updates/WD-css3-selectors-20010126.fr.html#selectors" target="_blank">site du W3C</a>
+
+	</body>
+</html>
+

@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> programme de base</title>
+		<link rel="stylesheet" href="notes_html_et_css.css" />
+	</head>
+	<body>
+	<h1>Faites votre mise en page avec Flexbox</h1>
+
+		<h2>Un conteneur, des éléments</h2>
+			<figure><img src="position_defaut.png"></figure>
+			<p class="code">
+				< div id="conteneur"><br>
+				    < div class="element 1">Element </ div><br>
+				    < div class="element 2">Element </ div><br>
+				    < div class="element 3">Element </ div><br>
+				< /div> 	
+			</p>
+
+		<h2>Soyez flex !</h2>
+			<p class="code"> #conteneur {display: flex;}</p>
+			<figure><img src="flex_defaut.png"></figure>
+
+			<h3>La direction</h3>
+				<p> le sens que l'on veut. Avec flex-direction</p>
+				<blockquote> 
+					row :sur une ligne (par défaut) ;<br>
+					column :sur une colonne ;<br>
+					row-reverse : une ligne,ordre inversé ;
+					<br>
+					column-reverse :une colonne,ordre inversé.
+				</blockquote>
+				<p class="code">#conteneur <br>{display: flex;<br>flex-direction: column;}</p>
+				<figure><img src="flex_direction_column.png"></figure>
+
+			<h3>Le retour à la ligne</h3>
+				<p>flex-wrap : 
+					<blockquote>
+						nowrap : pas de retour (par défaut) ;<br>
+						wrap : plus la place , retour;<br>
+						wrap-reverse :à la ligne en sens inverse.
+					</blockquote>
+				</p> 
+				<figure><img src="flex_wrap.png"></figure>
+
+		<h2>Alignez-les !</h2>
+			<p>axe principale : horizontale => axe secondaire : verticale
+			<br>axe principale :  verticale => axe secondaire : horizontale  </p>
+
+			<h3>Aligner sur l'axe principal</h3>
+				<p>changer leur alignement 
+					<br>justify-content 
+					<blockquote>
+						flex-start : alignés au début (par défaut) ;
+						flex-end : alignés à la fin ;<br>
+						center : alignés au centre ;<br>
+						space-between :étirés sur tout l'axe (de l'espace entre) ;<br>
+						space-around : idem, mais aussi de l'espace sur les extrémités.
+					</blockquote>
+				</p>
+				<figure><img src="justify_content.png"></figure>
+				<p>marche aussi dans une direction verticale</p>
+
+			<h3>Aligner sur l'axe secondaire</h3>
+				<p>
+					align-items :
+					<blockquote>
+						stretch :sur tout l'axe (valeur par défaut) ;<br>
+						flex-start :au début ;<br>
+						flex-end :à la fin ;<br>
+						center :au centre ;<br>
+						baseline :sur la ligne de base (semblable à flex-start).
+					</blockquote> 
+				</p>
+				<p class="code"> 
+					#conteneur<br>
+					{display: flex;<br>
+					justify-content: center;<br>
+					align-items: center;}
+				</p>
+				<figure><img src="center_center.png"></figure>
+
+			<h3>Aligner un seul élément</h3>
+				<p>align-self  :
+						<blockquote class="code">
+							#conteneur{<br>
+							display: flex;<br>
+							flex-direction: row;<br>
+							justify-content: center;<br>
+							align-items: center;<br><br>
+							.element:nth-child(2) /* On prend le deuxième bloc élément */{<br>
+							background-color: blue;<br>
+							align-self: flex-end; /* Seul ce bloc sera aligné à la fin */
+							}
+
+						</blockquote>
+				</p>
+				<figure><img src="align_self.png"></figure>
+
+		<h2>Répartir plusieurs lignes</h2>
+			<p>un cas de figure où nous avons plusieurs lignes</p>
+			<figure><img src="multilignes.png"></figure>
+			<p>
+				align-content : 
+				<blockquote>
+					flex-start : placés au début ;
+					flex-end : placés à la fin ;
+					center :placés au centre ;
+					space-between :séparés avec de l'espace ;
+					space-around : idem, de l'espace au début et à la fin ;
+					stretch (par défaut) : occuper tout l'espace.
+				</blockquote>
+			</p>
+			<figure><img src="align_content.png"></figure>
+
+
+		<h2>Rappel à l'ordre</h2>
+			<p class="code">#conteneur {display: flex;}</p>
+			<figure><img src="flex_defaut.png"></figure>
+			<p class="code">
+				.element:nth-child(1){order: 3;}<br>
+				.element:nth-child(2){order: 1;}<br>
+				.element:nth-child(3) {order: 2;}
+			</p>
+			<figure><img src="order.png"></figure>
+
+		<h2>Encore plus flex : faire grossir ou maigrir les éléments</h2>
+			<p class="code">.element:nth-child(2) {flex: 1;}</p>
+			<figure><img src="flex1.png"></figure>
+
+			<p class="code">
+				.element:nth-child(1){flex: 2;}<br>
+				.element:nth-child(2){flex: 1;}
+			</p>
+			<figure><img src="flex2.png"></figure>
+
+	</body>
+</html>
+

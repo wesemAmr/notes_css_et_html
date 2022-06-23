@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> bordures et ombres</title>
+		<link rel="stylesheet" href="notes_html_et_css.css" />
+	</head>
+	<body>
+		<h1>Créez des bordures et des ombres</h1>
+			<h2>Bordures standard</h2>
+				<p>de nombreuses propriétés :<span class="code">border-width  , border-color  , border-style</span> </p>
+				<p>la super-propriété <span class="code">border</span> : 3 valeurs 
+					<ul>
+						<li><em>la largeur :</em> indiquez la largeur de votre bordure. Mettez une valeur en pixels</li>
+						<li><em>la couleur : </em>c'est la couleur de votre bordure</li>
+						<li><em>le type de bordure :</em> 
+							<ul>
+								<li>none  : pas de bordure (par défaut) </li>
+								<li>solid  : un trait simple </li>
+								<li>dotted  : pointillés</li>
+								<li>dashed  : tirets</li>
+								<li>double  : bordure double</li>
+								<li>groove  : en relief</li>
+								<li>ridge  : autre effet relief </li>
+								<li>inset  : effet 3D global enfoncé</li>
+								<li>outset  : effet 3D global surélevé</li>
+								
+							</ul>
+						</li>
+					</ul>
+				</p>
+				<p class="code">h1 {border: 3px blue dashed;}</p>
+				<figure><img src="bordures.png" id="imgbordures"></figure>
+
+				<h3>En haut, à droite, à gauche, en bas…</h3>
+					<ul>
+						<li>border-top  : bordure du haut ;</li>
+						<li>border-bottom  : bordure du bas ;</li>
+						<li>border-left  : bordure de gauche ;</li>
+						<li>border-right  : bordure de droite.</li>
+					</ul>
+
+			<h2>Bordures arrondies</h2>
+				<p>La propriété <span class="code">border-radius</span></p> 
+				<p class="code">p { border-radius: 10px; }</p>
+				<p>On peut aussi préciser la forme de l'arrondi pour chaque coin</p>
+				<p class="code">p { border-radius: 10px 5px 10px 5px; }</p>
+				<p>dans cet ordre :<br>
+					<blockquote>
+						En haut à gauche.<br>
+						En haut à droite.<br>
+						En bas à droite.<br>
+						En bas à gauche.</blockquote></p>
+				<p>On peur affiner l'arrondi de nos angles </p>
+				<p class="code">p {border-radius: 10px / 20px;}</p>
+					<p id="test_bordures_affine"> exemple sur ce texte</p>
+					
+
+
+			<h2>Les ombres</h2>
+				
+				<h3>box-shadow  : les ombres des boîtes</h3>
+
+					<p>quatre valeurs</p>
+						<blockquote>
+							Le décalage horizontal de l'ombre.<br>
+							Le décalage vertical de l'ombre.<br>
+							L'adoucissement du dégradé.<br>
+							La couleur de l'ombre.<br>
+						</blockquote>
+					<p class="code">p  { box-shadow: 6px 6px 0px black;}</p>
+					<p>valeur facultative : <span class="code">inset </span> .l'ombre est placée à l'intérieur du bloc
+</p>
+				<h3>text-shadow  : l'ombre du texte</h3>
+					<p>ajouter une ombre directement sur les lettres et fonctionne comme box-shadow</p>
+
+			
+	</body>
+</html>

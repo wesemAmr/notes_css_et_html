@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> les images</title>
+		<link rel="stylesheet" href="notes_html_et_css.css" />
+	</head>
+	<body>
+		<h1>Les images</h1>
+		<h2> les différents formats d'image </h2>
+		<p>Le poids de l'image sera plus ou moins élevé selon le format choisi, et la qualité de l'image va changer</p>
+
+		<h3>jpeg</h3>	
+		<p>	
+			Joint Photographic Expert Group </br> 
+			.jpg ou .jpeg <br>
+			sert pour les images et tout
+		</p>
+		
+		<h3>png</h3>	
+		<p>
+			Portable Network Graphics </br>
+			.png </br>
+			illustrations , logos, dessins
+
+		</p>
+		<h3>gif</h3>
+		<p>
+			illustrations animé
+		</p>
+
+		<h2>Insérer des images</h2>
+		<h3>comment insérer l'image : </h3>
+		<p>pour insérer une image il faut utiliser les balises "< img />"</p>
+		<p>deux attributs obligatoires : </br> src : mettre le chemin de l'image ou le lien </br> alt </p>
+		<p>L'attribut permettant d'afficher une bulle d'aide est le même que pour les liens : il s'agit de  title  . Cet attribut est facultatif. (passez la souris sur la polo3)</p>
+		<h3>miniature cliquable</h3>
+		<p>De nombreux sites permettent de redimensionner des images, comme <a href="https://www.resizepixel.com/fr/resize-image/">ResizePixel</a>	
+		, par exemple </br> Je les place toutes les deux dans un dossier. J'affiche la version mini  sur ma page et je fais un lien vers la version normale , pour que l'image agrandie s'affiche lorsqu'on clique sur la miniature. cliquez sur la polo4</p>
+		<p><img src="imgs_polo/polo_1_gt_redim.jpg" alt="Polo 1 rouge"></p>
+		<p><img src="imgs_polo/polo2_redim.jpg" alt="Polo 2 foncée"></p>
+		<p><img src="imgs_polo/Polo3_redim.jpeg" alt="Polo3" title="sa commence a ressembler a qqch"></p>
+		<p><a href="imgs_polo/polo4.jpeg"><img src="imgs_polo/polo4_redim.jpeg"></a></p>
+
+		<h2>Les figures </h2>
+		<p>Les figures peuvent être de différents types :
+			<ul>
+				<li>images ;</li><li>codes source ;</li><li>citations ;</li><li>etc.</li>
+			</ul>
+		</p>
+		<p>on peut mettres plusieurs images dans une figure </p>
+		<p>les figures viennent appuyer le texte</p>
+		<p class="code">< figure> < img src="images/blocnotes.png" alt="Bloc-Notes" />< /figure></p>
+		<figure>
+			<img src="cubes.png" alt="des cubes ">
+			<figcaption> des cubes de tou-par</figcaption>
+		</figure>
+		
+		<figure>
+			<img src="imgs_polo/volkswagen_logo.png" alt="logo VW">
+			<img src="imgs_polo/polo_1_gt_redim.jpg" alt="Polo 1">
+			<img src="imgs_polo/polo2_redim.jpg" alt="Polo 2">
+			<img src="imgs_polo/Polo3_redim.jpeg" alt="Polo 3">
+			<img src="imgs_polo/polo4_redim.jpeg" alt="polo 4">
+
+		</figure>
+	</body>
+</html>
